@@ -10,7 +10,7 @@ While drawing a structure the toxicity risk predictor will start looking for pot
 
 In order to assess the toxicity prediction's reliability we ran a set of toxic compounds and a set of presumably non-toxic compounds through the prediction. The diagram below shows the results obtained by predicting all available structures of four subsets of the RTECS database. E.g. all structures known to be mutagenic were run through the mutagenicity assessment. 86 % of these structures where found to bear a high or medium risk of being mutagenic. As a controlset served a collection of traded drugs of which the mutagenicity risk assessment revealed only 12 % of potentially harmful compounds.
 
-<img src="toxicity.git" />
+<img src="toxicity.gif" />
 
 The prediction process relies on a precomputed set of structural fragment that give rise to toxicity alerts in case they are encountered in the structure currently drawn. These fragment lists were created by rigorously shreddering all compounds of the RTECS database known to be active in a certain toxicity class (e.g. mutagenicity). During the shreddering any molecule was first cut at every rotatable bonds leading to a set of core fragments. These in turn were used to reconstruct all possible bigger fragments being a substructure of the original molecule. Afterwards, a substructure search process determined the occurence frequency of any fragment (core and constructed fragments) within all compounds of that toxicity class. It also determined these fragment's frequencies within the structures of more than 3000 traded drugs. Based on the assumption that traded drugs are largely free of toxic effects, any fragment was considered a risk factor if it occured often as substructure of harmful compounds but never or rarely in traded drugs.
 
@@ -70,4 +70,3 @@ The drug score combines druglikeness, cLogP, logS, molecular weight and toxicity
 <img src="score.gif" />
 
 ds is the drug score. si are the contributions calculated directly from of cLogP, logS, molweight and druglikeness (pi) via the second equation which describes a spline curve. Parameters a and b are (1, -5), (1, 5), (0.012, -6) and (1, 0) for cLogP, logS, molweight and druglikeness, respectively. ti are the contributions taken from the 4 toxicity risk types. The ti values are 1.0, 0.8 and 0.6 for no risk, medium risk and high risk, respectively.
-
