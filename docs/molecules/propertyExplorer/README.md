@@ -16,7 +16,7 @@ The prediction process relies on a precomputed set of structural fragment that g
 
 ## cLogP Calculation
 
-The logP value of a compound, which is the logarithm of its partition coefficient between n-octanol and water log(coctanol/cwater), is a well established measure of the compound's hydrophilicity. Low hydrophilicities and therefore high logP values cause poor absorption or permeation. It has been shown for compounds to have a reasonable propability of being well absorbt their logP value must not be greater than 5.0. The distribution of calculated logP values of more than 3000 drugs on the market underlines this fact (see diagram).
+The logP value of a compound, which is the logarithm of its partition coefficient between n-octanol and water log(c<sub>octanol</sub>/c<sub>water</sub>), is a well established measure of the compound's hydrophilicity. Low hydrophilicities and therefore high logP values cause poor absorption or permeation. It has been shown for compounds to have a reasonable propability of being well absorbt their logP value must not be greater than 5.0. The distribution of calculated logP values of more than 3000 drugs on the market underlines this fact (see diagram).
 
 <img src="logP_1.gif" />
 
